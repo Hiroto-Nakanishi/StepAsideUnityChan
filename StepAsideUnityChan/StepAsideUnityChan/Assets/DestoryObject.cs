@@ -11,6 +11,12 @@ public class DestoryObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //接触したオブジェクトを破棄（追加）
+        Destroy(other.gameObject);
+    }
 }
+
